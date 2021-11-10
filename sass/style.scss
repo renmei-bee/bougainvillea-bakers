@@ -1,0 +1,516 @@
+$main-color:#028fbc;
+$accent-color:#e62f8b;
+$font-large: 40px;
+$font-midium: 30px;
+$font-small: 18px;
+
+
+body{
+font-family: 'Homemade Apple',  'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
+background-color: #fff;
+color: #603813;
+font-size: 16px;
+    p{
+        font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
+    }
+}
+
+.page{
+    background-image: url(../images/patern@2x.jpg);
+    background-position:  left top;
+    background-repeat: repeat;
+// ボーダーを四方に固定するため
+    .border{
+        border: 30px solid $main-color;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: 100;
+        right: 0;
+        top: 0;
+        pointer-events: none;
+    }
+    
+
+// ページ上部ボーダー上のタイトル
+    .top-title{
+        background-color: $main-color;
+        height: 120px;
+        font-size: $font-large;
+        color: #fff;
+        text-align: center;
+        padding-top: 50px;
+    }   
+}
+
+
+// ---------------
+//  ヘッダー
+// ---------------
+
+header{
+    font-size: 25px;
+    background-color: #ffffff90;
+    height: 160px;
+    width: 1030px;
+    margin: 0 auto;
+    position: fixed;
+    left: 0;
+    right: 0;
+    z-index: 1;
+
+    // スクロール後ヘッダーを上につかせる
+    position: sticky;
+    top: 30px;
+
+    ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    li{
+        list-style-type: none;
+        margin:0 25px 0 0;
+    }
+        a{
+        text-decoration: none;
+        color: #603813;
+        width: 160px;
+        height: 160px;
+        text-align: center;
+        
+        display: inline-block;
+         :not(.logo){
+            line-height: 200px;
+         } 
+        }       
+    
+}
+// ナビ　ホバー時の画像切り替え
+header {
+    .nav-home a:hover{
+        background-image: url(../images/home-hover.png);
+        background-repeat: no-repeat;
+        background-position: 50% 70%;
+        span{
+            display: none;
+        }
+    }
+    .nav-about a:hover{
+        background-image: url(../images/about-hover.png);
+        background-repeat: no-repeat;
+        background-position: 50% 70%;
+        span{
+            display: none;
+        }
+    }
+    .nav-menu a:hover{
+        background-image: url(../images/menu-hover.png);
+        background-repeat: no-repeat;
+        background-position: 50% 70%;
+        span{
+            display: none;
+        }
+    }
+    .nav-access a:hover{
+        background-image: url(../images/access-hover.png);
+        background-repeat: no-repeat;
+        background-position: 50% 70%;
+        span{
+            display: none;
+        }
+    }
+}
+
+// ---------------
+// フッター
+// ---------------
+
+footer{
+    background-color: $main-color;
+    font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
+    color: #fff;
+    text-align: left;
+    line-height: 1.6;
+     
+    .footer-inner{
+        width: 960px;
+        margin: 0 auto;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 14px;
+    }
+    address{
+        margin: 10px 0 20px 0;
+    }
+    ul{
+       display: flex;
+    }
+    li{
+    list-style-type: none;
+    font-size: 30px;
+    margin: 0 50px 0 20px;
+    }
+    a{
+        color: #fff;
+        .fab:hover{
+            color: #e62f8b;
+        }
+    }
+}
+
+
+
+// ---------------
+// メインページ
+// ---------------
+
+main{
+    width: 1920px;
+    margin: 0 auto;
+
+    // スライドショー
+    .bx-wrapper{
+        box-shadow: none;
+        border: none;
+        background-color: transparent;
+        width: 100%;
+        margin: 0 auto ;
+    }
+    //    メインキャッチ
+    .main-catch{
+        text-align: center;
+        // ブーゲンビリアイラスト配置
+        .bougain{
+            top: -80px;
+            left: -300px;
+            position: relative;
+        }
+        .catch-text{
+            margin: -600px 0 200px 0;
+        
+        h2{
+            font-size: $font-large;
+            margin-bottom: 50px;
+            line-height: 2;
+        }
+        h3{
+            font-size: $font-midium;
+            margin-bottom: 50px;
+            line-height: 1.6;
+        }
+        p{
+            font-size: $font-small;
+            line-height: 2;
+        }
+    }
+}
+    //  サブイメージ
+    .sub-image{
+        height: 500px;
+        background-image: url(../images/sub-image.jpg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+
+    //  ニュース
+     .news{
+         text-align: center;
+         width: 960px;
+         margin: 100px auto 150px auto;
+        
+         h2{
+             font-size: $font-large;
+             margin: 100px auto;
+         }
+         ul{
+             display: flex;
+             justify-content: space-between;
+             align-items: flex-start;
+         }
+         li{
+            width: 320px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            img{
+                margin: 20px 0;
+            }
+        }
+        a{
+            font-family: 'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
+            text-decoration: none;
+            color: #603813;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        a:hover{
+            border: solid 1px #603813;    	/* 内側の線になる一本線の枠線をひく*/
+            outline: solid 3px #603813;    /* 外側の線になる一本線の枠線をひく*/
+            outline-offset: 10px;        /* 外側の線と内側の線の空き具合を調整*/
+            background-color: #faf5ea;
+        }
+    }
+}
+// メニュースライダー
+.top-menu{
+    width: 960px;
+    margin: 100px auto 300px auto;
+    text-align: center;
+    h2{
+        font-size: $font-large;
+        margin: 100px auto;
+        
+    }
+    .slider{
+        margin: 0 0 50px 0;
+        .slider-img{
+        margin: 0 10px;
+        height: auto;
+        }
+        img {
+        margin: 50px 5px;
+        border: 5px solid #fff;
+        width: 100%;
+        height: auto;
+        }
+        .slide-dots{
+            text-align: center;
+            li{
+              display: inline-block;
+              margin: 0 15px;
+              button{
+                position: relative;
+                text-indent: -9999px;
+                &:before{
+                  content: '〇';
+                  color: #603813;
+                  font-size: 18px;
+                  text-indent: 0px;
+                  position: absolute;
+                  top: 0;
+                  left: 0;
+                }
+              }
+              &.slick-active{
+                button:before{
+                  content: '◆';
+                }
+              }
+            }
+          }
+}       
+    p{
+        font-size: $font-small;
+        line-height: 2;
+        margin-bottom: 50px;
+    }
+    // see moreボタン
+    .see-more {
+        a{
+        font-family: 'Homemade Apple',  'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
+        width: 200px;
+        height: 90px;
+        font-size: 25px;
+        line-height: 1.5;
+        background-color: #fff;
+        color: #603813;
+        border: 2px solid #603813;
+        border-radius: 10px;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        span{
+            font-size: 15px;
+        }
+        }
+        a:hover{
+            background-color: #603813;
+            color: #fff;
+        }
+    }
+}
+
+// トップへ戻るボタン
+.back-top {
+    position: fixed;
+    bottom: 20%;
+    right: 20%;
+    display: none;
+   }
+
+// ---------------
+// トップページ以外共通
+// ---------------
+
+
+.main-image img{
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+}
+.page-catch{
+    .catch-text{
+        text-align: center;
+        margin: 100px 0;
+    }
+    h2{
+        font-size: $font-large;
+        margin-bottom: 50px;
+        line-height: 2;
+    }
+    h3{
+        font-size: $font-midium;
+        margin-bottom: 50px;
+    }
+    p{
+        font-size: $font-small;
+        line-height: 2;
+    }
+}
+
+// ---------------
+// アバウトページ
+// ---------------
+.about{
+    width: 700px;
+    margin: 0 auto;
+    ul{
+        margin: 200px 0;
+        text-align: center;
+    }
+    h3{
+        font-size: $font-midium;
+        margin-bottom: 40px;
+    }
+    li{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 700px;
+        height: 250px;
+        margin: 100px 0;
+        
+
+        span{
+            width: 300px;
+            height: 250px;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            flex-direction: column;
+        }
+        P{
+            font-size: 15px;
+            line-height: 1.6;
+        }
+    
+    }
+}
+
+// ---------------
+// メニューページ
+// ---------------
+.menu{
+    width: 960px;
+    margin: 0 auto;
+    font-size: 15px;
+
+        // 値段の英語のみフォントをかえるため
+    .english{
+            font-family: 'Homemade Apple',  'ヒラギノ明朝 Pro W3', 'Hiragino Mincho Pro', '游明朝','Yu Mincho', '游明朝体', 'YuMincho','ＭＳ Ｐ明朝', 'MS PMincho', serif;
+           
+    }
+    h3{
+        margin: 20px 0 10px 0;
+        font-size: 20px;
+        line-height: 1.6;
+    }
+    h4{
+        line-height: 1.6;
+    }
+    ul{
+        width: 960px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    li{
+        list-style-type: none;
+        margin-bottom: 80px;
+        width: 300px;
+    }
+    .price-card{
+        display: flex;
+        justify-content:space-between;
+        align-items: flex-end;
+        p{
+            text-align: right;
+        }
+    }
+    
+       // フォカッチャ価格を画像の上に配置するため
+    article{
+        position: relative;
+        img{
+            margin-bottom: 100px;
+        }
+    }
+
+ 
+    .focaccia-price{
+        background-color: #00000050;
+        color: #fff;
+        position: absolute;
+        top: 20px;
+        left: 0;
+        width: 120px;
+        height: 160px;
+        padding: 10px;
+        margin-bottom: 500px;
+        line-height: 1.6;
+        text-align: right;
+        h3{
+            margin-bottom: 5px;
+        }
+        h4{
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// ---------------
+// アクセスページ   
+// ---------------
+.access{
+    width: 960px;
+    margin: 100px auto 300px auto;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    font-size: $font-small;
+    line-height: 1.6;
+    border: solid 1px #603813;    	/* 内側の線になる一本線の枠線をひく*/
+    outline: solid 3px #603813;    /* 外側の線になる一本線の枠線をひく*/
+    outline-offset: 10px;        /* 外側の線と内側の線の空き具合を調整*/
+
+    
+    .access-info{
+        margin: 10px 0 auto 50px;
+
+    }
+    iframe{
+    filter: sepia(50%);
+    }
+}
